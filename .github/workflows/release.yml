@@ -1,0 +1,21 @@
+name: Release to PyPI
+on:
+  release:
+    # when you release new version via github, this action will be triggered
+    # and publish it to PyPI
+    types: [published, edited]
+
+jobs:
+  release:
+    name: Build and Release
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: ECSHackWeek/action@v1.4.0
+
+      - name: publish to PyPI
+      - shell: bash
+        # default repo will be PyPI. This is configurable
+        # see https://python-poetry.org/docs/1.1/cli/#publish
+        # for more information.
+        run: poetry publish --build -u __token__ -p ${{ secrets.PYPI_API_TOKEN }}
