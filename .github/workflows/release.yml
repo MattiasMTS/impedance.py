@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: MattiasMTS/action@v1.4.0
+      - uses: MattiasMTS/action@v1
 
       - name: publish to PyPI
       - shell: bash

@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: MattiasMTS/action@v1.4.0
+      - uses: MattiasMTS/action@v1
 
       - name: Linting with flake8
         run: poetry run flake8 . --count --show-source --exclude=*.ipynb_checkpoints
@@ -29,7 +29,7 @@ jobs:
         python-version: [3.7, 3.8, 3.9]
 
     steps:
-      - uses: MattiasMTS/action@v1.4.0
+      - uses: MattiasMTS/action@v1
         with:
           python-version: ${{ matrix.python_version }}
 
