@@ -7,7 +7,7 @@ inputs:
     default: 3.7
 
 env:
-  poetry-version: 1.1.14
+  POETRY-VERSION: 1.1.14
 
 runs:
   using: composite
@@ -16,7 +16,7 @@ runs:
 
       - name: Install Poetry
         run: |
-          curl -sSL https://install.python-poetry.org | python3 - --version ${{ env.poetry-version }}
+          curl -sSL https://install.python-poetry.org | python3 - --version ${{ env.POETRY-VERSION }}
           echo "$HOME/.poetry/bin" >> $GITHUB_PATH  # add poetry to PATH.
 
       - name: Set up Python ${{ inputs.python-version }}

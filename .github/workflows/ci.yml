@@ -5,22 +5,22 @@ on:
     branches:
       - main
 env:
-  os: ubuntu-latest
+  OS-VERSION: ubuntu-latest
 
 jobs:
   linting:
     name: Run linters
-    runs-on: ${{ env.os }}
+    runs-on: ${{ env.OS-VERSION }}
 
     steps:
-      - uses: ECSHackWeek/action@v1.4.0
+      - uses: MattiasMTS/action@v1.4.0
 
       - name: Linting with flake8
         run: poetry run flake8 . --count --show-source --exclude=*.ipynb_checkpoints
 
   tests:
     name: Run tests
-    runs-on: ${{ env.os }}
+    runs-on: ${{ env.OS-VERSION }}
 
     strategy:
       fail-fast: false
@@ -29,7 +29,7 @@ jobs:
         python-version: [3.7, 3.8, 3.9]
 
     steps:
-      - uses: ECSHackWeek/action@v1
+      - uses: MattiasMTS/action@v1.4.0
         with:
           python-version: ${{ matrix.python_version }}
 
