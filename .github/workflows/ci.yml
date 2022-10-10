@@ -35,7 +35,7 @@ jobs:
 
       - uses: ./.github/actions/build_impedance
         with:
-          python-version: ${{ matrix.python_version }}
+          python-version: ${{ matrix.python-version }}
 
       - name: Run tests with pytest
         run: poetry run pytest --cov=impedance .
