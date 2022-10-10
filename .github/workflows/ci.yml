@@ -28,7 +28,7 @@ jobs:
       fail-fast: false
       max-parallel: 4
       matrix:
-        python-version: [3.7, 3.8, 3.9]
+        python-version: [3.6, 3.7, 3.8, 3.9, 3.10, 3.11]
 
     steps:
       - uses: actions/checkout@v3
@@ -41,7 +41,7 @@ jobs:
         run: poetry run pytest --cov=impedance .
 
       - name: Upload coverage to coveralls
-        if: matrix.python-version == 3.7 && github.repository == 'ECSHackWeek/impedance.py'
+        if: matrix.python-version == 3.6 && github.repository == 'ECSHackWeek/impedance.py'
         run: coveralls --service=github
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
