@@ -15,10 +15,10 @@ runs:
       - uses: actions/checkout@v3
 
       - name: Install Poetry
-        shell: bash
         run: |
           curl -sSL https://install.python-poetry.org | python3 - --version ${{ env.POETRY-VERSION }}
           echo "$HOME/.poetry/bin" >> $GITHUB_PATH  # add poetry to PATH.
+        shell: bash
 
       - name: Set up Python ${{ inputs.python-version }}
         uses: actions/setup-python@v4
@@ -27,7 +27,7 @@ runs:
           cache: 'poetry'  # needs setup-python@v4, speeds up building
 
       - name: Install poetry and dependencies
-        shell: bash
         run: |
           poetry env use ${{ env.python-version }}
           poetry install
+        shell: bash
