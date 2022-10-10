@@ -16,7 +16,7 @@ runs:
 
       - id: Install Poetry
         run: |
-          curl -sSL https://install.python-poetry.org | python3 - --version ${{ env.POETRY-VERSION }}
+          curl -sSL https://install.python-poetry.org | python3 - --version 1.1.14
           echo "$HOME/.poetry/bin" >> $GITHUB_PATH  # add poetry to PATH.
         shell: bash
 
