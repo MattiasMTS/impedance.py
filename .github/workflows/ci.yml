@@ -13,6 +13,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - uses: actions/checkout@v3
+
       - uses: ./.github/actions/build_impedance
 
       - name: Linting with flake8
@@ -29,6 +31,8 @@ jobs:
         python-version: [3.7, 3.8, 3.9]
 
     steps:
+      - uses: actions/checkout@v3
+
       - uses: ./.github/actions/build_impedance
         with:
           python-version: ${{ matrix.python_version }}
