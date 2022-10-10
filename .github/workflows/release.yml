@@ -3,7 +3,8 @@ on:
   release:
     # when you release new version via github, this action will be triggered
     # and publish it to PyPI
-    types: [published, edited]
+    types:
+      - published
 
 jobs:
   release:

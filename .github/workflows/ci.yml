@@ -10,7 +10,7 @@ env:
 jobs:
   linting:
     name: Run linters
-    runs-on: ${{ env.OS-VERSION }}
+    runs-on: ubuntu-latest
 
     steps:
       - uses: MattiasMTS/action@v1.4.0
@@ -20,7 +20,7 @@ jobs:
 
   tests:
     name: Run tests
-    runs-on: ${{ env.OS-VERSION }}
+    runs-on: ubuntu-latest
 
     strategy:
       fail-fast: false
