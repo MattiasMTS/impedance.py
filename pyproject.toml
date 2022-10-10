@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "impedance.py"
+version = "1.4.1"
+description = "A Python package for working with electrochemical impedance data"
+authors = ["Matt Murbach <yourmailhere@mail.com>"]  # TODO add mail
+license = "MIT licence"
+
+[tool.poetry.dependencies]
+python = ">=3.7<3.10"
+# altair = ">=3.0"
+matplotlib = ">=3.0"
+numpy = ">=1.14"
+scipy = ">=1.0"
+
+[tool.poetry.dev-dependencies]
+numpydoc = "^1.5.0"
+coveralls = "3.2.0"
+nbsphinx = "^0.8.9"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
