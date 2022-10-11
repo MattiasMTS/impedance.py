@@ -6,7 +6,7 @@ authors = ["Matt Murbach <yourmailhere@mail.com>"]  # TODO add mail
 license = "MIT licence"
 
 [tool.poetry.dependencies]
-python = ">=3.7,<3.8"
+python = ">=3.7,<3.12"
 numpy = ">=1.14"
 scipy = ">=1.0"
 matplotlib = ">=3.0"
