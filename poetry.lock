@@ -1,21 +1,21 @@
--[[package]]
--name = "altair"
--version = "4.2.0"
--description = "Altair: A declarative statistical visualization library for Python."
--category = "main"
--optional = false
--python-versions = ">=3.7"
--
--[package.dependencies]
--entrypoints = "*"
--jinja2 = "*"
--jsonschema = ">=3.0"
--numpy = "*"
--pandas = ">=0.18"
--toolz = "*"
--
--[package.extras]
--dev = ["black", "docutils", "ipython", "flake8", "pytest", "sphinx", "mistune (<2.0.0)", "m2r", "vega-datasets", "recommonmark"][[package]]
+[[package]]
+name = "altair"
+version = "4.2.0"
+description = "Altair: A declarative statistical visualization library for Python."
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[package.dependencies]
+entrypoints = "*"
+jinja2 = "*"
+jsonschema = ">=3.0"
+numpy = "*"
+pandas = ">=0.18"
+toolz = "*"
+
+[package.extras]
+dev = ["black", "docutils", "ipython", "flake8", "pytest", "sphinx", "mistune (<2.0.0)", "m2r", "vega-datasets", "recommonmark"][[package]]
 name = "alabaster"
 version = "0.7.12"
 description = "A configurable sidebar-enabled Sphinx theme"
